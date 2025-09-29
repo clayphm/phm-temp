@@ -4,3 +4,50 @@
   border-radius: 50%;
   object-fit: cover;
 }
+
+body {
+  margin: 0;
+  height: 100vh;
+  background-color: #2b2b2b;
+  color: white;
+  overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.bg {
+  margin: 0 auto;
+  padding: 5vw;
+  text-align: center;
+}
+
+.welcome {
+  display: flex;
+  min-height: 100vh;
+  padding: 20px;
+  gap: 20px;
+  box-sizing: border-box;
+}
+
+.pic1 {
+  flex: 1;
+  background-image: url(babyann.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 30px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: flex 0.8s ease-in-out, border-radius 0.8s ease-in-out,
+    box-shadow 0.8s ease-in-out;
+  cursor: pointer;
+}
+
+.pic1:hover {
+  flex: 4;
+  border-radius: 15px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.txt1 {
+  flex: 1;
+}
