@@ -41,13 +41,79 @@ body {
   cursor: pointer;
 }
 
-.pic1:hover {
-  flex: 4;
-  border-radius: 15px;
-  box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
-  z-index: 999;
+@media (min-width: 769px) {
+  .pic1:hover {
+    flex: 4;
+    border-radius: 15px;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+    z-index: 999;
+  }
 }
 
 .txt1 {
   flex: 1;
+}
+
+@media (max-width: 768px) {
+  .welcome {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    position: relative;
+    box-sizing: border-box;
+  }
+
+  .pic1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    background-image: url(babyann.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    animation: banner 1.5s ease-in-out forwards;
+    animation-delay: 1s;
+  }
+
+  @keyframes banner {
+    0% {
+      width: 100%;
+      height: 100vh;
+      margin: 0;
+      border-radius: 0;
+    }
+    100% {
+      margin-top: 20px;
+      width: calc(100% - 10%);
+      aspect-ratio: 16/9;
+      height: 25vh;
+      padding: 20px auto;
+      border-radius: 15px;
+      box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+    }
+  }
+
+  .txt1 {
+    display: block;
+    opacity: 0;
+    animation: slideUp 1.5s ease forwards;
+    animation-delay: 4s;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
